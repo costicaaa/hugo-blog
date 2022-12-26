@@ -1,5 +1,7 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = "Costica's dev blog"
 
 theme = 'maverick'
+
+enableEmoji = true
