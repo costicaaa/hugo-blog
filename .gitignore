@@ -5,3 +5,5 @@
 # `hugo server` command "temp" files
 .hugo_build.lock
 resources/_gen/*
+
+public
