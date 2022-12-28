@@ -1,0 +1,4 @@
+<div style="text-align: center">
+    {{$svg := .Get 0}}
+    {{ $svg  | readFile | safeHTML }}
+</div>
