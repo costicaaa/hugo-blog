@@ -1,4 +1,5 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://starlit-basbousa-11a529.netlify.app/'
+
 languageCode = 'en-us'
 title = "Costica's dev blog"
 
