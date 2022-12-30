@@ -1,0 +1,34 @@
+<div id="firebaseui-auth-container">
+<button id='show-firebase-ui'>Subscribe!</button>
+
+<script>
+var uiConfig = {
+  callbacks: {
+    signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+      alert('All good! Will (maybe) keep you updated!');
+      return false;
+    },
+    uiShown: function() {
+      document.getElementById('loader').style.display = 'none';
+    }
+  },
+  signInFlow: 'popup',
+  signInOptions: [
+    {
+        provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+        requireDisplayName: false, // don't ask for their names
+     },
+  ],
+
+  // Terms of service url.
+  // tosUrl: '<your-tos-url>',
+  // Privacy policy url.
+  // privacyPolicyUrl: '<your-privacy-policy-url>'
+};
+
+document.getElementById("show-firebase-ui").onclick = function () {
+    ui.start('#firebaseui-auth-container', uiConfig);
+};
+
+</script>
+</div>

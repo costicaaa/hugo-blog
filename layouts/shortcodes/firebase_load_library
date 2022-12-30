@@ -1,0 +1,19 @@
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+<script >
+  const firebaseConfig = {
+      apiKey: "AIzaSyCXhAmT2qUBiVP5HK0GbIDa6NSen-vVldY",
+      authDomain: "costica-dev-firebase-auth.firebaseapp.com",
+      projectId: "costica-dev-firebase-auth",
+      storageBucket: "costica-dev-firebase-auth.appspot.com",
+      messagingSenderId: "634556710472",
+      appId: "1:634556710472:web:6640183898d353c721227d"
+  };
+    const app = firebase.initializeApp(firebaseConfig);
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+<script>
+var ui = new firebaseui.auth.AuthUI(app.auth());
+</script>
