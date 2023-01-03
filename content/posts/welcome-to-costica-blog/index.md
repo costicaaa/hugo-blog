@@ -1,7 +1,7 @@
 ---
 title: "Welcome to Costica's Blog"
 date: 2022-12-26T16:29:04+02:00
-draft: false
+draft: true
 ---
 # Hi :wave: :wave: :wave:
 
