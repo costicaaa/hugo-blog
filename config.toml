@@ -1,4 +1,4 @@
-baseURL = 'https://starlit-basbousa-11a529.netlify.app/'
+baseURL = '/'
 
 languageCode = 'en-us'
 title = "Costica's dev blog"
