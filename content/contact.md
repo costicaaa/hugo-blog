@@ -12,7 +12,10 @@ draft: true
 https://www.linkedin.com/in/costin-costache/
 
 ### Dev.to 
-https://dev.to/costicaaa
+https://dev.to/costica
+
+### GitHub.com 
+https://github.com/costicaaa
 
 ### Twitter 
 (just following people and reading news) https://twitter.com/costin_costache
