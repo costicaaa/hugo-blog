@@ -1,7 +1,7 @@
 ---
 title: "Hacking a zero costs blogging system. With emails!"
 date: 2022-12-26T22:29:34+02:00
-draft: true
+draft: false
 ---
 
 {{< svg "/content/posts/creating-a-free-blogging-system/images/whole_4.svg" >}}
