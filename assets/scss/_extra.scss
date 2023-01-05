@@ -1,8 +1,12 @@
-.m,
 hr {
-  border: groove;
+  border: revert;
+  margin: revert;
 }
 
 code, pre {
   background: rgba(201, 235, 238, 0.44)
+}
+
+h1, h2, h3, h4, h5, strong, b {
+  font-size: revert;
 }
