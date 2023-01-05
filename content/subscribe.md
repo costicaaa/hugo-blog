@@ -1,7 +1,7 @@
 ---
 title: "Subscribe"
 date: 2022-12-30T21:47:47+02:00
-draft: true
+draft: false
 ---
 
 Hey, a few notes about the "subscribe" mechanism. 
@@ -19,7 +19,7 @@ I explained in-depth why in this [article]({{< ref "/posts/creating-a-free-blogg
 
 1. I won't have an email automatically sent every time I post something. It doesn't make sense for me. You'd hate me for it. Worse, I'd hate myself for it.
 2. I can't spam, even if I wanted to, because I would have to write something and send it. I'm waaaay too lazy for that, I promise.
-3. Unsubscribing is not supported out of the box, yet, maybe never will be. That means you have to [contact me]({{< ref "/contact" >}}) and let me know that I should delete your email from that list. 
+3. Unsubscribing is not supported out of the box, yet, maybe never will be. That means you have to [contact me]({{< ref "/about-me" >}}) and let me know that I should delete your email from that list. 
 
 Still want to go for it? 
 
