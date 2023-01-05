@@ -1,12 +1,8 @@
 ---
-title: "Get in touch"
+title: "About me"
 date: 2023-01-05T21:29:33+02:00
 draft: false
 ---
-
-
-# About me
-
 I'm a Software Engineer with several years of experience in turning chaotic
 requirements into apps. Proficient in areas ranging from Backend, Frontend,
 DevOps, Testing, all the way to Cloud and Distributed Systems.
@@ -21,7 +17,7 @@ Willing to learn: anything (except CSS).
 
 Currently working as a Tech Lead & Software Engineer for Adobe.
 
-## Get in touch!
+## Get in touch
 
 ### Email
 :email: google.com - cosraducostache 
