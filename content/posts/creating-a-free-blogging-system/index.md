@@ -232,3 +232,5 @@ The next step would be to reduce the amount of work needed by my laptop when I w
 3. Break the problem into small pieces and tackle them one by one (hosting, generator site, subscription).
 
 4. Don't take anything for granted. I was really surprised to find out about the `Firebase`'s lack of sign-up protection against spammers.
+
+That's it. That's how I decided how to set this up. By-bye! 
