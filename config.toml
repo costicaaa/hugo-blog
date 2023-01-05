@@ -6,3 +6,22 @@ title = "Costica's dev blog"
 theme = 'maverick'
 
 enableEmoji = true
+
+[menu]
+    [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = -1000
+
+    [[menu.main]]
+    identifier = "about me"
+    name = "About me"
+    url = "/about-me/"
+    weight = -800
+
+    [[menu.main]]
+    identifier = "subscribe"
+    name = "Subscribe?!"
+    url = "/subscribe/"
+    weight = -100
