@@ -8,7 +8,7 @@ Hey, a few notes about the "subscribe" mechanism.
 
 I know you might find it a little strange, but I decided to run this blog completely cost-free, including the subscription mechanism. 
 
-I explained in-depth why in this [article](https://costica.dev/hacking-a-free-blogging-system-with-emails), but here's a summary of how it works: 
+I explained in-depth why in this [article](https://costica.dev/posts/hacking-a-free-blogging-system-with-emails), but here's a summary of how it works: 
 
 1. If you do decide to "subscribe", click the button below and register in the Firebase-Ui popup. The password doesn't matter, just input anything longer than 6 characters. 
 2. :email: Please verify your email (Firebase will handle this automatically, you should get an email to the address that you chose to subscribe with). 
