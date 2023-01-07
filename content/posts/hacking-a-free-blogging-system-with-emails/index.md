@@ -4,14 +4,14 @@ date: 2022-12-26T22:29:34+02:00
 draft: false
 ---
 
-{{< svg "/content/posts/creating-a-free-blogging-system/images/whole_4.svg" >}}
+{{< svg "/content/posts/hacking-a-free-blogging-system-with-emails/images/whole_4.svg" >}}
 
 {{< details "Tl;dr" >}}
 I managed to spin up a blogging system, publicly available over the internet, with email subscription capabilities for basically 0$.
 
 This post will describe my thought process and **how** I decided what pieces to glue together.
 
-In case you don't care about my twisty mind process, [here's| todo :: add link] a step-by-step tutorial, just in case anyone wants to copy this setup for their own website.
+In case you don't care about my twisty mind process, [here's](https://costica.dev/creating-a-free-blogging-system-quick-guide) a step-by-step tutorial, just in case anyone wants to copy this setup for their own website.
 
 {{< /details >}}
 
@@ -19,7 +19,7 @@ In case you don't care about my twisty mind process, [here's| todo :: add link] 
 
 ## Writing a blog... 
 
-So I've decided to start this blog. I've already explained why [here]({{< ref "/posts/welcome-to-costica-blog" >}}).
+So I've decided to start this blog. I've already explained why [here](https://costica.dev/posts/welcome-to-costica-blog).
 
 As usual, I started to overthink it: 
 
@@ -205,7 +205,7 @@ Putting it all together:
 6. _[Sometimes]_ I decide to email the subscribers using `Firebase` and `MailerSend`
 
 
-{{< svg "/content/posts/creating-a-free-blogging-system/images/whole_4.svg" >}}
+{{< svg "/content/posts/hacking-a-free-blogging-system-with-emails/images/whole_4.svg" >}}
 
 The one major sensible choice that is not ideal is using `Firebase` Auth as the "subscription" mechanism: 
 
