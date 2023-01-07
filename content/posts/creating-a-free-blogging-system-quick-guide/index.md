@@ -4,7 +4,7 @@ date: 2022-12-28T21:17:23+02:00
 draft: false
 ---
 
-Just in case anyone else wants to piggybank on the system described [here](https://costica.dev/hacking-a-free-blogging-system-with-emails), here's a quick guide documenting the major setup steps and some _gotcha moments_. 
+Just in case anyone else wants to piggybank on the system described [here](https://costica.dev/posts/hacking-a-free-blogging-system-with-emails), here's a quick guide documenting the major setup steps and some _gotcha moments_. 
 
 It is not meant as a complete follow along tutorial, and it assumes that you have some knowledge and understanding of how web generally works. 
 
