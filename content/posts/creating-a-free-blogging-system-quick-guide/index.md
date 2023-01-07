@@ -1,10 +1,12 @@
 ---
-title: "Creating a Free Blogging System: step-by-step guide"
+title: "Creating a Free Blogging System: a quick guide"
 date: 2022-12-28T21:17:23+02:00
-draft: true
+draft: false
 ---
 
-Just in case anyone else wants to piggybank on the system described [here]({{< ref "/posts/creating-a-free-blogging-system" >}}), here's a step-by-step guide with some additional explanations. 
+Just in case anyone else wants to piggybank on the system described [here]({{< ref "/posts/creating-a-free-blogging-system" >}}), here's a quick guide documenting the major setup steps and some _gotcha moments_. 
+
+It is not meant as a complete follow along tutorial, and it assumes that you have some knowledge and understanding of how web generally works. 
 
 ## Prerequisites 
 
@@ -18,11 +20,13 @@ Just in case anyone else wants to piggybank on the system described [here]({{< r
 ## Do this, then do that 
 
 ##### 1. Repo setup
-Have a local git repository up & running, synced with a publicly accessible one (mine is https://github.com/costicaaa/hugo-blog).
+Have a local git repository up & running, synced with a publicly accessible one ([this](https://github.com/costicaaa/hugo-blog) is mine).
+
+It can also be a source of inspiration for various settings and tweaks that I did to some of the Hugo / Hugo-theme that I use. Feel free to explore :) 
 
 ##### 2. [Optional] Hugo setup 
 
-[Update](https://github.com/costicaaa/hugo-blog/blob/256cfb6f2bfc8c5cfc04e92c7816d0ce9bc87408/config.toml#L1) `config.toml` so that the `baseURL`'s value is `/`. This way, no code updates are necessary if you decide to change any DNS settings later. 
+[Update](https://github.com/costicaaa/hugo-blog/blob/256cfb6f2bfc8c5cfc04e92c7816d0ce9bc87408/config.toml#L1) `config.toml` so that the `baseURL`'s value is `/`. This way, no code updates are necessary if you decide to change any DNS settings later. Btw, the last step was to complete the DNS setup, so I just followed this simple yet efficient [guide](https://dev.to/easybuoy/setting-up-domain-with-namecheap-netlify-1a4d). _(Thanks, Ezekiel!)_
 
 No need to worry about not owning a domain name yourself, this free :sunglasses: guide is free-to-follow as well. We are not going to change the website name settings in `Netlify`; instead, we're just going to use whatever random URL they generate.    
 
@@ -53,7 +57,7 @@ Uncheck Google Analytics. Click "Authentication" and select the `Email/Password`
 Then check the `Email/Password` and click `Save`.
 ![firebase_auth_2](images/firebase_auth_2.png)
 
-Add the `domain name` (that you have set up in `netlify`) in the `Settings/Authorized Domains` section.
+Add the `domain name` (that you have set up in `Netlify`) in the `Settings/Authorized Domains` section.
 ![firebase_auth_2.1](images/firebase_auth_2.1.png)
 
 
@@ -143,19 +147,21 @@ So, we have a working static site generator with a VCS (git), analytics, and sub
 
 Up until this point, we generated the static HTML files manually, by calling `hugo`. Then manually uploaded the `public` directory to `netlify`. 
 
-We're not apes. We can do better. 
+We're not apes. **We can do better.** 
 
 
-As per the `Netlify` docs, go to https://GitHub.com/apps/netlify and install their app, giving it access to the repository containing the blog. Then link the site created earlier with the `GitHub` repository that contains the blog. 
+As per the `Netlify` docs, go to https://github.com/apps/netlify and install their app, giving it access to the repository containing the blog. Then link the site created earlier with the `GitHub` repository that contains the blog. 
 
 Luckily (or well done, `Netlify`!) the default settings work out of the box: build command - `hugo` and publish directory `public` are the default settings and they are pre-completed. 
 
 Let's test it out with one more [commit](https://github.com/costicaaa/hugo-blog/commit/b78e98434852c4523ca35ee354100fdacca6823c)... aaaaand it seems like it does indeed work out of the box.
 
+##### Pipeline caveats
+
 However, I'm not entirely satisfied yet: 
-1. What happens with the stale files in the `public` directory? Hugo doesn't do so by default, and its CLI option [doesn't always work](https://GitHub.com/gohugoio/hugo/issues/8433#issuecomment-822988001). I assume it does a clean build as it would be simpler for `Netlify` to do so. But I didn't find anything in their docs to confirm. 
-2. What if I (somehow?!) manage to run out of build minutes? `Netlify` provides 300 per month - it is absurd, but still a minus for the current solution. 
-3. `Netlify`'s app behavior is to redeploy every single time I push a new commit to `GitHub` on the selected branch. While creating a new `deploy` branch that I can merge with `master` is an option, I would like something simpler: why wouldn't I deploy only when, say, the commit title starts with `[Article]`? 
+1. What happens with the stale files in the `public` directory? Hugo doesn't do so by default, and its CLI option [doesn't always work](https://github.com/gohugoio/hugo/issues/8433#issuecomment-822988001). I assume it does a clean build as it would be simpler for `Netlify` to do so. But I couldn't find anything in their docs to confirm. 
+2. What if I (somehow?!) manage to run out of build minutes? `Netlify` provides 300 per month - it is absurd that I would ever need more, but still a "minus" for the current solution. 
+3. `Netlify`'s app behavior is to redeploy every single time I push a new commit to `GitHub` on the selected branch. While creating a new `deploy` branch that I can merge with `master` is an option, I would like something simpler: why wouldn't I deploy only when, say, the commit title starts with something like `[Article]`? 
 
 Nonetheless, good enough for now. 
 
@@ -163,10 +169,6 @@ That's it. If you followed along, you should now have a publicly accessible blog
 
 ## Closing notes 
 
-Hopefully, this provides a good-enough guide so that anyone can test out the "free blogging system" I came up with.
+Hopefully, this provides a good-enough guide so that anyone, or future self, can test out the [free blogging system](https://costica.dev/posts/creating-a-free-blogging-system) I came up with.
 
-However, it is not ideal and some things are missing: 
-* the deployment pipeline is not perfect 
-* it uses the default site name generated by `netlify` 
-
-That was it. Thank you. By-bye! 
+That was it. Hope it helps. By-bye! 
