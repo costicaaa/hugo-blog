@@ -10,11 +10,11 @@ It is not meant as a complete follow along tutorial, and it assumes that you hav
 
 ## Prerequisites 
 
-1. Netlify account 
-2. Google/Firebase account
-3. GoatHunter account 
-2. GitHub account and repository  
-3. Hugo installed locally 
+1. [Netlify](https://app.netlify.com/signup) account for hosting
+2. [Google/Firebase](https://firebase.google.com) account for a hacky subscription mechanism 
+3. [GoatCounter](https://www.goatcounter.com) account for analytics
+4. [GitHub](https://github.com) account and repository for version control
+5. [Hugo](https://gohugo.io) installed locally - for building the static files
 
 
 ## Do this, then do that 
