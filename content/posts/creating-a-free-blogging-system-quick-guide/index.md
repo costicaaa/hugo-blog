@@ -35,7 +35,7 @@ No need to worry about not owning a domain name yourself, this free :sunglasses:
 With a basic Hugo blog in place (for example, I'm using [this](https://github.com/costicaaa/hugo-blog/tree/5342958b77f409545fd0c8cb64f7e6e4abb4b52a)), we can generate the static HTML files and upload them just to test everything is alright and get the public URL for the site.
 
 Generate the static files locally using: 
-```js
+```shell
 hugo
 ```
 
@@ -75,7 +75,7 @@ On top of that, adding this in Hugo markdown is not a pleasure either. I won't r
 * One (`firebase_load_library`) to import the library and instantiate it: 
 
 
-{{< highlight html >}}
+```html
 <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
 <script >
   const firebaseConfig = {
@@ -91,13 +91,13 @@ On top of that, adding this in Hugo markdown is not a pleasure either. I won't r
 <script>
 var ui = new firebaseui.auth.AuthUI(app.auth());
 </script>
-{{< /highlight >}}
+```
 
 Yes, the order in which they are being loaded matters... so script cascading for the win. 
 
 * Another (`firebase_subscribe`) to output the button that initializes the "subscription" (sign-up, actually) mechanism: 
 
-{{< highlight html >}}
+```html
 <div id="firebaseui-auth-container">
 <button id='show-firebase-ui'>Subscribe!</button>
 
@@ -134,7 +134,7 @@ document.getElementById("show-firebase-ui").onclick = function () {
 </script>
 </div>
 
-{{< /highlight >}}
+```
 
 I tested this code in a previous PoC when I explored Hugo and validated the `Hugo` - `Netlify` - `Firebase` shenanigans. As a logical person, however, I have basically 0 confidence that my copy-paste works without any issues. So let's test it out.
 
