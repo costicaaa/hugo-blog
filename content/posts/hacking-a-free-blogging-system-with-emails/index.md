@@ -11,7 +11,7 @@ I managed to spin up a blogging system, publicly available over the internet, wi
 
 This post will describe my thought process and **how** I decided what pieces to glue together.
 
-In case you don't care about my twisty mind process, [here's](https://costica.dev/creating-a-free-blogging-system-quick-guide) a step-by-step tutorial, just in case anyone wants to copy this setup for their own website.
+In case you don't care about my twisty mind process, [here's](https://costica.dev/posts/creating-a-free-blogging-system-quick-guide) a step-by-step tutorial, just in case anyone wants to copy this setup for their own website.
 
 {{< /details >}}
 
@@ -71,7 +71,7 @@ For the rest of the story, we will consider the `Domain Name` cost as a necessar
 
 Please note that these are already sorted out: 'need's are must-haves, 'would like' are priority #2, while the "would be cool" thingies won't really matter in the overall decision process. 
 
-To sum it up, I want an easy-and-enjoyable-to-use-system (standards: :nerd: nerd), that is cheap to host and serve. If I can add some sort of analytics and an RSS feed, all the better. 
+To sum it up, I want an easy-and-enjoyable-to-use-system (standards: 🤓 nerd), that is cheap to host and serve. If I can add some sort of analytics and an RSS feed, all the better. 
 
 ## How can I accomplish that?
 
@@ -86,47 +86,47 @@ It all boils down to how I'm going to serve the content.
 
 The first thing that comes to mind is to use a static site generator, have the HTML files of a functional blog, and upload everything to `s3`. Then some `CloudFront` configuration magic to make it serve the static website (which I have to upload to `s3` "manually") when the URL `costica.dev` is hit. 
 
-:white_check_mark: `s3` is cheap afaik, so it shouldn't be a problem. Being in an AWS ecosystem, I could then use a combination of `HTML forms` and `lambdas` integrated with some sort of `storage` behind a `Gateway` to store the emails. Store where? In a database? Another `s3` bucket? 
+✅ `s3` is cheap afaik, so it shouldn't be a problem. Being in an AWS ecosystem, I could then use a combination of `HTML forms` and `lambdas` integrated with some sort of `storage` behind a `Gateway` to store the emails. Store where? In a database? Another `s3` bucket? 
 It seems a bit complex, but totally doable. 
 
-:exclamation: The big "no" for me, in this case, is that I expose myself to potentially _huge_ costs. Yes, there are `budgets` and `alerts` and different combinations available. But would I want to risk it? Hell no. 
+❗ The big "no" for me, in this case, is that I expose myself to potentially _huge_ costs. Yes, there are `budgets` and `alerts` and different combinations available. But would I want to risk it? Hell no. 
 
 Still, might be a valuable lesson and would make me go really in-depth into cost analysis and budgeting, thus learning something new. Worth considering if nothing better comes up. 
 
 #### Option 2: Blogging platforms 
-:x: I could use an already existing platform, like Wix, Medium, Weebly, etc. Although it might work, and have some things working out of the box, I don't think I will have the control I want over the layout and overall feel of the site.
+❗I could use an already existing platform, like Wix, Medium, Weebly, etc. Although it might work, and have some things working out of the box, I don't think I will have the control I want over the layout and overall feel of the site.
 
-:x: WYSIWYG editors are cool, but they usually end up disappointing me and making me hate my life. 
+❗WYSIWYG editors are cool, but they usually end up disappointing me and making me hate my life. 
 
-:x: Then there's the behemoth, WordPress, with enough plugins to support everything I want - but it also requires an up & running server all the time, with an actual database. Seems overkill for my needs, and, more importantly, goes against the main objective of keeping costs low. 
+❗Then there's the behemoth, WordPress, with enough plugins to support everything I want - but it also requires an up & running server all the time, with an actual database. Seems overkill for my needs, and, more importantly, goes against the main objective of keeping costs low. 
 
 #### Option 3: Static hosting 
 
 I've had a scratch inside my head for a long time about `fastly`, as it is something I hear about a lot in my day-to-day job, but that doesn't affect me at all. 
-Between that and my bias towards `next`, `nuxt`, `nest.js`, I end up googling for `netlify` instead. :facepalm: 
+Between that and my bias towards `next`, `nuxt`, `nest.js`, I end up googling for `netlify` instead. 🤦 
 
-:light_bulb: Surprise, surprise! Two minutes later, after a quick comb through their offerings, it looks like a no-brainer.
+💡 Surprise, surprise! Two minutes later, after a quick comb through their offerings, it looks like a no-brainer.
 
-:white_check_mark: Relying on `netlify` to serve static content which I somehow upload (but it can also integrate with `github`) is the same as the S3 option which I first considered - WITHOUT the costs or the risks of running it in "the cloud".
+✅ Relying on `netlify` to serve static content which I somehow upload (but it can also integrate with `github`) is the same as the S3 option which I first considered - WITHOUT the costs or the risks of running it in "the cloud".
 
 #### Option 4: Fastly
 Realizing my mistake, I looked a bit into `fastly` as well. 
 
-:x: But the conclusion was that it looks more like a caching PaaS that relies on your site being hosted somewhere else... sounds pricey. No, thanks, back to `netlify`, as I am now biased and want to explore what it can do.
+❗But the conclusion was that it looks more like a caching PaaS that relies on your site being hosted somewhere else... sounds pricey. No, thanks, back to `netlify`, as I am now biased and want to explore what it can do.
 
 ## Choosing a Static site generator 
 Now I have my hosting & networking "architecture" figured out: I will rely on `netlify` to serve my website for free. 
 
 The next step is to choose a Static Site Generator that supports the other things. Let's explore the options: https://jamstack.org/generators.
 
-![jamstack](images/jamstack.png)
+![jamstack](https://costica.dev/posts/hacking-a-free-blogging-system-with-emails/images/jamstack.png)
 
 I'm kinda tired of `js`, so I'll skip `Next.js` just because I don't think I can put up with javascript bundling errors and configurations in my free time. I'll save that "fun" for work. 
 
 The next ones on the https://jamstack.org/generators/ are `Hugo` and `Jekyll` (ignoring `Gatsby`, `Nuxt`, and `Docusaurus` for the same reason as `Next.js`). 
 
 {{< details "Wow, this guy's an idiot. Not considering all the options et al..." >}} 
-> :exclamation: It might seem like I'm being superficial and that I don't consider all the choices, some of them obviously more popular (by the number of github stars). However, before you try to prove me wrong, I am only adhering to the requirements (more specifically, the second requirement with priority #1: "I **need** to enjoy using it").
+> ❗ It might seem like I'm being superficial and that I don't consider all the choices, some of them obviously more popular (by the number of github stars). However, before you try to prove me wrong, I am only adhering to the requirements (more specifically, the second requirement with priority #1: "I **need** to enjoy using it").
 > 
 > Yes, it is a subjective choice. Yes, I don't have arguments for it. Yes, it is my personal project, and yes, it is going to reflect my mood. Moving on.
 {{< /details >}}
@@ -143,13 +143,16 @@ I don't want to spend too much time on this, as I risk losing myself in the tech
 ## Analytics 
 I got help here: a friend recommended http://goatcounter.com/ for the sole reason that it doesn't require a GDPR notice. It is also free and "self-hosted", I can get a dashboard and see how many times each page has been accessed. Check, check, check. Moving on. 
 
-### [Nice to have] Email subscriptions - part 1: "subscribe" and "store"
+
+## [Nice to have] Email subscriptions
+
+### Email subscriptions - part 1: "subscribe" and "store"
 Now, to the interesting part. I got most of my requirements covered by my ``Hugo`` - `Netlify` - `GoatCounter` choice.
 
 Up until this point, everything is completely free. This is a refreshing win, as it gives me the energy to go forward with the project. No extra stress from another monthly payment, yay!
 
 When I think of "subscribing" to a blog, there are two options: 
-1. Use a (paid :fearful:) "platform" that offers a form and then use their dashboard to send emails to the people already subscribed  
+1. Use a (paid 😨) "platform" that offers a form and then use their dashboard to send emails to the people already subscribed  
 2. Implement it myself: create an HTML form, have it submit a request, save the email in some storage (database, file, etc). Later, I should be able to iterate over the emails saved in my system and email each of the saved addresses.
 
 I'm ignoring the first option because it seems like a costly one. At this point, I'm decided that either I'm going to find a way to do this for exactly 0$ and create a blog post about it, or going to postpone this requirement and reconsider it in the future.
@@ -164,7 +167,7 @@ And while looking into various serverless offerings, I found https://www.scalewa
 Now that we have "solved" the `compute` part, let's look into storage. I remembered reading about https://www.ilovefreesoftware.com/01/windows/internet/plugins/how-to-store-files-as-bookmarks-in-browser-and-sync-across-devices.html, and then it struck me. 
 Yes, there are other free storage offerings in the cloud - found by a simple google search. 
 
-:sunglasses: But I'm not going to use them.
+😎 But I'm not going to use them.
 
 #### Compute & Storage - `Firebase`
 
@@ -175,26 +178,28 @@ Now, why do I think this is the magic bullet for my "email subscription" issue? 
 So, when a user registers (completes the "`FirebaseForm`"), it will be stored directly in the `Firebase`'s storage - no compute / backend needed. 
 
 
-### [Nice to have] Email subscriptions - part 2: "send" emails
+### Email subscriptions - part 2: "send" emails
+
 The next thing I'm going to need is to get a list of all users "signed up" in my `Firebase` application and send them an email. 
 Email servers (server, that sounds pricey already, no thanks) can be tricky to install and maintain. AWS' `SES` (Simple Email Service) doesn't have any free quota. 
 A few google searches later, I find https://www.mailersend.com/ supporting sending up to 12k emails per month for the free tier. 
 
 I don't expect to have anywhere near a 10th of that subscribers, and I'm not going to send an email more than once a month anyway. Good enough.
 
-> :exclamation: Yes, it is not a complete solution and it requires a script that would crawl the users registered in `Firebase` and then call the `MailerSend API` for each of them. But it solves the issue at hand and I am quite happy with it. Moving on.
+>  Yes, it is not a complete solution and it requires a script that would crawl the users registered in `Firebase` and then call the `MailerSend API` for each of them. But it solves the issue at hand and I am quite happy with it. Moving on.
 
 
-### [Nice to have] Conversation options
+## [Nice to have] Conversation options
+
 By the time I made the choices for the hosting, static site generator, and "subscription" system I realized I don't really want a "comments" section - or at least not for the MVP of this blog, anyways.
 
 Maybe if enough people hit "subscribe" using their email, at some point I will reconsider it. 
 
 But, let's be honest... most likely this blog will only serve as another line in my already longer-than-should-be CV.
 
-> Later update: I got lucky here, as this comes out-of-the-box with the `Maverick` theme that I chose :facepalm:. It also uses the same mechanism I wanted to try out myself: embedding github comments. 
+> Later update: I got lucky here, as this comes out-of-the-box with the `Maverick` theme that I chose 🤦. It also uses the same mechanism I wanted to try out myself: embedding github comments. 
 
-### Final solution overview 
+## Final solution overview 
 
 Putting it all together: 
 1. We have a guy (me) that writes something on his laptop, pushes the article to `github`  
@@ -209,12 +214,12 @@ Putting it all together:
 
 The one major sensible choice that is not ideal is using `Firebase` Auth as the "subscription" mechanism: 
 
-1. :white_check_mark: It is free
-2. :white_check_mark: I think it is a cool solution and allows me to write a nice article about it 
-3. :x: The "subscribe" process needs to be documented - users might find it strange. Since this is a tech blog, and because I don't really care about marketing and conversion rates, not a real blocker
-4. :x: The "unsubscribe" mechanism will only be done manually, requiring my intervention. Again, I should make sure I let users know how they can reach me so I can remove them from the list
-5. :x: No sign-up spam protection 
-6. :warning: it is a Google product, I know from experience that docs are gonna suck big time
+1. ✅ It is free
+2. ✅ I think it is a cool solution and allows me to write a nice article about it 
+3. ❗The "subscribe" process needs to be documented - users might find it strange. Since this is a tech blog, and because I don't really care about marketing and conversion rates, not a real blocker
+4. ❗The "unsubscribe" mechanism will only be done manually, requiring my intervention. Again, I should make sure I let users know how they can reach me so I can remove them from the list
+5. ❗No sign-up spam protection 
+6. ⚠️ it is a Google product, I know from experience that docs are gonna suck big time
 
 Ideal? No. Good enough for starters? Yes, as it allows me to move on with this without being stuck in an "I am not doing it because of costs or fear of..." kind-of situation. 
 
@@ -223,7 +228,7 @@ The most important part, however: **it does work**. Proof to that, you're readin
 The next step would be to reduce the amount of work needed by my laptop when I want to send emails. I could leverage `scaleway` into running some functions for that. We'll see. 
 
 
-### Takeaways
+## Takeaways
 
 1. While this is not a pleasant task, rather a stressful one (see `<panic mode>`), I managed to get it done by following the rule of thumb of "deliver an MVP and build on top of it".
 
