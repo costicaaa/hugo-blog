@@ -20,7 +20,7 @@ Currently working as a Tech Lead & Software Engineer for Adobe.
 ## Get in touch
 
 ### Email
-:email: google.com - cosraducostache 
+✉️ google.com - cosraducostache 
 
 ### LinkedIn 
 https://www.linkedin.com/in/costin-costache/

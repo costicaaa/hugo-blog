@@ -140,7 +140,7 @@ I tested this code in a previous PoC when I explored Hugo and validated the `Hug
 
 First, I need to [create a new page](https://github.com/costicaaa/hugo-blog/commit/4a32eb3b5b8056681d53eefec48509e4b897db6b) that will contain the `Firebase` shortcodes, and with some explanation of how the subscription mechanism works.
 
-Btw, if you want to test how this works, here's the [page](https://costica.dev/subscribe). Yes, this actually tricks you into making you subscribe :japanese_ogre:. 
+Btw, if you want to test how this works, here's the [page](https://costica.dev/subscribe). Yes, this actually tricks you into making you subscribe. 
 
 ##### 6. Pipeline setup
 
