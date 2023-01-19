@@ -1,6 +1,6 @@
 ---
 title: "Web apps - my mental cheat-sheet"
-date: 2023-01-19T21:52:59+02:00
+date: 2023-01-19T19:52:59+02:00
 draft: false
 ---
 
