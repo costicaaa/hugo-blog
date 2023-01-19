@@ -25,3 +25,6 @@ enableEmoji = true
     name = "Subscribe?!"
     url = "/subscribe/"
     weight = -100
+
+[markup.goldmark.renderer]
+    unsafe= true
