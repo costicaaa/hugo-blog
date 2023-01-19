@@ -25,4 +25,9 @@ Create new post with images
 > hugo new --kind post-bundle posts/my-2nd-post
 
 ## How to deploy 
-Currently the Github.com/costicaaa/hugo-blog repo is linked with Netlify through the official GitHub - Netlify app and it builds and publishes the blog each time a commit is pushed to Github. 
+Currently the Github.com/costicaaa/hugo-blog repo is linked with Netlify through the official GitHub - Netlify app and it builds and publishes the blog each time a commit is pushed to Github.
+
+## Draw Io export svg with background
+Embed images 
+Text settings: Embed Fonts
+
