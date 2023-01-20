@@ -1,7 +1,7 @@
 ---
 title: "Continuous Delivery: HTML to Kubernetes - the why"
 date: 2023-01-08T22:39:42+02:00
-draft: false
+draft: true
 ---
 
 I think Continuous Delivery is the magic sauce that allows `web` to be the go-to platform for all software nowadays.
