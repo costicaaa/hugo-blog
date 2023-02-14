@@ -1,7 +1,7 @@
 ---
 title: "Continuous Delivery: HTML to Kubernetes - the why"
 date: 2023-01-08T22:39:42+02:00
-draft: true
+draft: false
 ---
 
 I think Continuous Delivery is the magic sauce that allows `web` to be the go-to platform for all software nowadays.
@@ -73,7 +73,7 @@ The list can go on. The list does go on.
 
 Yes, it used to be a joke running on LinkedIn a couple of years ago.
 
-IMO, that joke has, unfortunately, become true: it doesn't matter if you want to work as a frontend, backend, full-stack, DevOps, cloud engineer, etc.
+IMO, that joke has, unfortunately, become true: it doesn't matter if you want to work as a Frontend, Backend, full-stack, DevOps, Cloud Engineer, etc.
 
 As a "web developer", you now need to understand the big picture of what `delivering software in a browser` means.
 
@@ -91,14 +91,15 @@ Let this be the start of a "how to web in modern ages" series. My rough idea of 
 
 First, set up the basics of how the internet works:
 * [Delivering software in a browser - Frontend apps](https://costica.dev/posts/web-apps-my-mental-cheat-sheet/)
-* The strong woman behind the frontend - Web servers
+* [Then we're going to look at how important it is to understand how your app is going to be deployed... by running it locally](todo:: article about Ultimate node-docker setup)
+* [Then we're going to set up a reproducible development environment using docker-compose](work-in-progress, sorry!)
 
 The next step is to see how one can integrate them and how to test them. How to be efficient when coding. How to _deliver_ fast.
 
 After we have a working PoC, we are going to scale it up using a local Kubernetes cluster and deep dive into what delivering software at scale means, while still being able to be efficient when coding.
 
 # Necessary disclaimer
-It is a biased tutorial of what should you focus on if you want to deliver good, scalable software, in a timely manner.
+It is a biased tutorial of what _I think_ one should focus on if one wants to deliver good, scalable software, in a timely manner.
 
 That means there will be a lot of focus on the CI/CD, testing, and understanding **how** & **why** things work in the modern world.
 
@@ -108,10 +109,10 @@ Fair warning: most likely, the plan will change while I write different articles
 
 And that's ok because that's what `web dev` is about: delivering software **before** requirements or priorities change.
 
-I would also like to get input from the community. I am open to changing my plan (see what I did there?) if I find out certain topics or areas would be of greater interest than my plan.  So don't be shy, say `Hi` 👋...
+I would also like to get input from the community. I am open to changing my plan (see what I did there?) if I find out certain topics or areas would be of greater interest than what I initially considered.  So don't be shy, say `Hi` 👋...
 
 Ok now, go on, we can't go into Kubernetes if we can't display anything in a browser. Go get familiar with [web apps](https://costica.dev/posts/web-apps-my-mental-cheat-sheet/), because
-understanding the front-end is the stepping stone to understanding how everything works. And that statement comes from a backend dev, btw ;)
+understanding the front-end is the stepping stone to understanding how everything works. Just to be clear, that statement comes from a backend dev 😉
 
 By-bye! 
 
