@@ -90,9 +90,9 @@ That's why I am writing down my mental model - my cheatsheet, if you will. This 
 Let this be the start of a "how to web in modern ages" series. My rough idea of what's important and how to tackle it:
 
 First, set up the basics of how the internet works:
-* [Delivering software in a browser - Frontend apps](https://costica.dev/posts/web-apps-my-mental-cheat-sheet/)
-* [Then we're going to look at how important it is to understand how your app is going to be deployed... by running it locally](https://costica.dev/posts/backend-delivery-hands-on-docker-1/)
-* [Then we're going to set up share-able dev setups using docker-compose](work-in-progress, sorry!)
+* [Delivering software in a browser](https://costica.dev/posts/web-apps-my-mental-cheat-sheet/) - Frontend apps
+* Then we're going to look at how important it is to [understand how your app is going to be deployed](https://costica.dev/posts/backend-delivery-hands-on-docker-1/)... by running it locally
+* Then we're going to set up share-able dev setups using docker-compose(work-in-progress, sorry!)
 
 The next step is to see how one can integrate them and how to test them. How to be efficient when coding. How to _deliver_ fast.
 
