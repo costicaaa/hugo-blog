@@ -1,0 +1,24 @@
+---
+title: "Emoji Cheatsheet"
+date: 2023-01-10T17:55:20+02:00
+draft: true
+---
+
+❗ :exclamation:
+✅  :check_mark:
+❌ :x:
+💡 :surprise:
+😎 :sunglasses:
+😨 :fearful:
+🤦 :facepalm:
+⚠️ :warning:
+👋 :wave:
+😉 :wink:
+
+
+## Draw Io export svg with background
+Embed images
+Text settings: Embed Fonts
+(Click [here]() for higher quality visuals)
+
+[![image](images%.image_name.svg)](diagram_viewer_link)
