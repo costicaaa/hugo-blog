@@ -242,10 +242,12 @@ services:
 
 Another cool thing I discovered is that `docker-compose` supports [anchors](https://medium.com/@anasanjaria/code-reuse-in-docker-compose-using-yaml-anchor-feature-6cb2ff1d0427). 
 
-## Closing up 
-Putting it all together, [here's](https://github.com/costicaaa/node-quickstart/tree/v2.0-dev_and_prod_ready_quickstart) a commit with the whole setup :) 
+### Final notes
 
-### Coming next
+Putting it all together, [here's](https://github.com/costicaaa/node-quickstart/tree/v2.0-dev_and_prod_ready_quickstart) a commit with the whole setup :)
+
 While this is all nice for the local environment and helps us code and debug efficiently, it is only the starting point. 
 
 Now that we have the fundamentals, we should have everything we need to start deploying the application in Kubernetes.
+
+By-bye!
