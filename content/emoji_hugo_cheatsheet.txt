@@ -14,6 +14,10 @@ draft: true
 ⚠️ :warning:
 👋 :wave:
 😉 :wink:
+🥚 :egg:
+🐣 :hatching_egg:
+🐓 :chicken: / :rooster:
+🤯 :mind_blown: / :exploding_head:
 
 
 ## Draw Io export svg with background
