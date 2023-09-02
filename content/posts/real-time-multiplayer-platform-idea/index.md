@@ -4,16 +4,26 @@ date: 2023-09-02T15:19:46+03:00
 draft: false
 ---
 
-Time for me to get back to work and get to the architecting & coding of a project I've been thinking about for a long time.
+Time for me to get back to work and get to the architecting & coding of a project I've been thinking about for a long time: designing the backend platform for multiplayer games. 
 
 And to have some accountability, I will be publicly documenting this whole process, and, who-knows, maybe some people will find it useful, or at least learn from my experience.
 
 ![img.png](images/img.png)
 
-Considering popular frameworks like the open-source Godot or the top-dog Unity, multiplayer in games is usually handled with a client (player) serving as the server.
-On top of that, the tutorials I've seen are full of combined logic of client/server decisions in the same file.
+No, I'm not doing anything *brand new*. 
 
-For me, that's a clear no-go.
+All the major game engines have their own way of handling this: 
+* [Unity](https://docs-multiplayer.unity3d.com/)
+* [Godot](https://godotengine.org/article/multiplayer-in-godot-4-0-scene-replication/)
+* [Unreal engine](https://docs.unrealengine.com/5.2/en-US/networking-and-multiplayer-in-unreal-engine/)
+
+And there are some general-purpose alternatives as well: 
+* [Heroic Labs' Nakama](https://heroiclabs.com/nakama)
+* [Google's Agones](https://github.com/googleforgames/agones)
+
+Is my experiment going to compete with any of those? Probably (**definitely**) not. 
+
+But it makes for an interesting challenge, especially if we change the mindset a bit and consider the server as an integral part of the process. 
 
 **It might be just me and my superficial understanding of the gaming world.**
 
